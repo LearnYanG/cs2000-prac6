@@ -1,6 +1,6 @@
-counter_eq = 0
-counter_gt = 0
-counter_lt = 0
+counter_equal = 0
+counter_great = 0
+counter_less_than = 0
 counter_return = 0
 
 class VMTranslator:
@@ -322,6 +322,14 @@ class VMTranslator:
                 "M=0\n"
             )
         return n + function_code
+    
+    def vm_call(function_name, n_args):
+        '''Generate Hack Assembly code for a VM call operation'''
+        return ""
+
+    def vm_return():
+        '''Generate Hack Assembly code for a VM return operation'''
+        return ""
 
 # A quick-and-dirty parser when run as a standalone script.
 if __name__ == "__main__":

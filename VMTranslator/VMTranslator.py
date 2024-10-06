@@ -1,7 +1,6 @@
 counter_equal = 0
 counter_great = 0
 counter_less_than = 0
-counter_return = 0
 
 class VMTranslator:
 

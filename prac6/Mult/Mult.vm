@@ -1,0 +1,52 @@
+// Calculates a = x*y
+// a is a local variable
+// x & y are static variables
+
+// Put your code here.
+
+push constant 0
+pop local 0
+
+push static 0
+push static 0
+push constant 0
+lt
+not
+if-goto YG
+neg
+label YG
+pop temp 0
+
+label LP
+
+push temp 0
+push constant 0
+gt
+not
+if-goto ENDLP
+
+push temp 0
+push constant 1
+sub
+pop temp 0
+
+push local 0
+push static 1
+add
+pop local 0
+goto LP
+
+label ENDLP
+
+push static 0
+push constant 0
+lt
+not
+if-goto YG2
+push local 0
+neg
+pop local 0
+label YG2
+
+label END
+goto END

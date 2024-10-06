@@ -1,0 +1,35 @@
+// Contains a function Fib.fib that calculates and returns the nth Fibonacci number recursively
+// n is supplied as an argument
+
+// Put your code here.
+
+function Fib.fib 2
+
+push argument 0
+pop local 0
+
+push argument 0
+push constant 1
+gt
+not
+if-goto YG
+
+push argument 0
+push constant 1
+sub
+call Fib.fib 1
+
+push argument 0
+push constant 2
+sub
+call Fib.fib 1
+
+add
+
+pop local 0
+
+label YG
+
+push local 0
+
+return
